@@ -52,7 +52,7 @@ export default function Camera({ onCapture }: CameraProps) {
   return (
     <div className="flex flex-col items-center">
       <div className="rounded bg-gray-100 my-3 p-2 text-center w-full">
-        Draw your character and show it to the camera, then hit 'Take photo'
+        Draw your character and show it to the camera, then hit &lsquo;Take photo&rsquo;
       </div>
       <div className="flex justify-center w-full">
         <video
