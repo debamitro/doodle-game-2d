@@ -32,7 +32,7 @@ export default function Camera({ onCapture }: CameraProps) {
         stream.getTracks().forEach(track => track.stop());
       }
     };
-  }, [stream]);
+  }, []);  
 
   const capturePhoto = () => {
     if (!videoRef.current) return;
@@ -51,6 +51,7 @@ export default function Camera({ onCapture }: CameraProps) {
 
   return (
     <div className="relative">
+      Draw your character and show it to the camera<br />
       <video
         ref={videoRef}
         autoPlay

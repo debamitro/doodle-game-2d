@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-4xl font-bold mb-8 text-center">Create Your Game Character</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Doodle Game 2d</h1>
         
         <div className="mb-8">
           <Camera onCapture={handleCapture} />
@@ -62,7 +62,7 @@ export default function Home() {
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors disabled:opacity-50"
                 disabled={loading}
               >
-                {loading ? 'Creating Character...' : 'Create Game Character'}
+                {loading ? 'Creating game...' : 'Play my game'}
               </button>
             </div>
           )}

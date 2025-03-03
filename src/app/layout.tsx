@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Game Character Creator',
-  description: 'Create and play with your own game character',
+  title: 'Doodle Game 2d',
+  description: 'Play a 2-d game with your own character',
 }
 
 export default function RootLayout({
