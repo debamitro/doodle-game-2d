@@ -17,29 +17,6 @@ export default function PlayGame() {
     }
   }, []);
 
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    const step = 10;
-    switch (e.key) {
-      case 'ArrowUp':
-        setPosition(prev => ({ ...prev, y: Math.max(0, prev.y - step) }));
-        break;
-      case 'ArrowDown':
-        setPosition(prev => ({ ...prev, y: Math.min(90, prev.y + step) }));
-        break;
-      case 'ArrowLeft':
-        setPosition(prev => ({ ...prev, x: Math.max(0, prev.x - step) }));
-        break;
-      case 'ArrowRight':
-        setPosition(prev => ({ ...prev, x: Math.min(90, prev.x + step) }));
-        break;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
-
   const handleNewCharacter = () => {
     // Clear the character from sessionStorage when creating a new one
     sessionStorage.removeItem('gameCharacter');
@@ -64,24 +41,29 @@ export default function PlayGame() {
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <h1 className="text-4xl font-bold mb-8">Play with Your Character!</h1>
       
-      <div className="relative w-[800px] h-[600px] bg-gray-100 rounded-lg overflow-hidden border-2 border-gray-200">
-        <div
-          className="absolute transition-all duration-200 ease-in-out"
-          style={{
-            left: `${position.x}%`,
-            top: `${position.y}%`
-          }}
-        >
-          <img 
-            src={imageData} 
-            alt="Your character" 
-            className="w-32 h-32 object-contain"
+      <div id="game">
+        <div id="character">
+          <img
+            src={imageData}
+            alt="Your character"
+            width="50"
+            height="50"
           />
+
+        </div>
+        <div className="ground"></div>
+        <div id="score-container">Score: <span id="score">0</span></div>
+        <div id="game-over">
+          <h1>Game Over!</h1>
+          <p>Your score: <span id="final-score">0</span></p>
+          <button id="restart">Play Again</button>
         </div>
       </div>
 
+      <script async src="/game.js"></script>
+
       <div className="mt-8 text-center">
-        <p className="text-lg mb-4">Use arrow keys to move your character!</p>
+        <p className="text-lg mb-4">Use space to jump</p>
         <button 
           onClick={handleNewCharacter}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
