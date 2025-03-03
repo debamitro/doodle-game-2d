@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function PlayGame() {
   const router = useRouter();
   const [imageData, setImageData] = useState<string | null>(null);
-  const [position, setPosition] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     // Get the character image from sessionStorage

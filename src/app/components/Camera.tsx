@@ -32,7 +32,7 @@ export default function Camera({ onCapture }: CameraProps) {
         stream.getTracks().forEach(track => track.stop());
       }
     };
-  }, []);
+  }, [stream]);
 
   const capturePhoto = () => {
     if (!videoRef.current) return;
