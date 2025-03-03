@@ -36,39 +36,44 @@ export default function PlayGame() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-4xl font-bold mb-8">Play with Your Character!</h1>
-      
-      <div id="game">
-        <div id="character">
-          <img
-            src={imageData}
-            alt="Your character"
-            width="50"
-            height="50"
-          />
-
-        </div>
-        <div className="ground"></div>
-        <div id="score-container">Score: <span id="score">0</span></div>
-        <div id="game-over">
-          <h1>Game Over!</h1>
-          <p>Your score: <span id="final-score">0</span></p>
-          <button id="restart">Play Again</button>
-        </div>
+    <main className="flex min-h-screen flex-col justify-center p-24 w-screen">
+      <div>
+        <h1 className="text-4xl font-bold mb-8 text-center">Doodle Game 2d</h1>
       </div>
 
-      <script async src="/game.js"></script>
+      <div className="rounded bg-gray-100 my-3 p-2 text-center w-full">
+          Play with Your Character! Use space to jump
+        </div>
+        
+      <div id="game" className='mx-auto'>
+          <div id="character">
+            <img
+              src={imageData}
+              alt="Your character"
+              width="50"
+              height="50"
+            />
 
-      <div className="mt-8 text-center">
-        <p className="text-lg mb-4">Use space to jump</p>
-        <button 
-          onClick={handleNewCharacter}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-        >
-          Create New Character
-        </button>
-      </div>
-    </div>
+          </div>
+          <div className="ground"></div>
+          <div id="score-container">Score: <span id="score">0</span></div>
+          <div id="game-over">
+            <h1>Game Over!</h1>
+            <p>Your score: <span id="final-score">0</span></p>
+            <button id="restart" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">Play Again</button>
+          </div>
+        </div>
+
+        <script async src="/game.js"></script>
+
+        <div className="mt-8 text-center">
+          <button 
+            onClick={handleNewCharacter}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          >
+            Create New Character
+          </button>
+        </div>
+    </main>
   );
 }

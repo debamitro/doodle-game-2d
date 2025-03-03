@@ -1,10 +1,11 @@
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 160, 200, 241;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -26,10 +27,6 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  /*background-color: #FF5733;*/
-  /*background-image: url('character-2.png');
-  background-size: contain;
-background-repeat: no-repeat;*/
   bottom: 50px;
   left: 100px;
   border-radius: 5px;
@@ -84,21 +81,6 @@ background-repeat: no-repeat;*/
   justify-content: center;
   align-items: center;
   z-index: 10;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 /* Character animation */
