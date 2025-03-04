@@ -44,9 +44,9 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col justify-center p-24 w-screen">
+    <main className="flex min-h-screen flex-col justify-center p-24 w-screen bg-gradient-to-b from-blue-400 to-purple-500">
       <div>
-        <h1 className="text-4xl font-bold mb-8 text-center">Doodle Game 2d</h1>
+        <h1 className="text-4xl font-fredoka font-bold text-purple-600 mb-2 text-center">Doodle Game 2d</h1>
       </div>
 
       {!photo && (
@@ -56,16 +56,22 @@ export default function Home() {
       )}
 
       {photo && (
-        <div className="flex flex-col items-center gap-4">
-          <h2 className="text-xl font-semibold">Your Photo</h2>
-          <img src={photo} alt="Original" className="max-w-sm rounded-lg shadow-lg" />
-          <button
-            onClick={handleSubmit}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors disabled:opacity-50"
-            disabled={loading}
-          >
-            {loading ? 'Creating game...' : 'Play my game'}
-          </button>
+        <div className="flex flex-col items-center">
+          <div className="font-comic rounded bg-gray-100 my-3 p-2 text-center w-full">
+            Your Photo
+          </div>
+          <div className="flex justify-center mt-4">
+            <img src={photo} alt="Original" className="max-w-sm rounded-lg shadow-lg" />
+          </div>
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={handleSubmit}
+              className="font-fredoka px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors disabled:opacity-50"
+              disabled={loading}
+            >
+              {loading ? 'Creating game...' : 'Play my game'}
+            </button>
+          </div>
         </div>
       )}
     </main>

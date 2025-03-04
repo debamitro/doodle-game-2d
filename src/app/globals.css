@@ -9,6 +9,14 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.font-fredoka {
+  font-family: var(--font-fredoka);
+}
+
+.font-comic {
+  font-family: var(--font-comic);
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));

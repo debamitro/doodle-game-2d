@@ -36,12 +36,12 @@ export default function PlayGame() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col justify-center p-24 w-screen">
+    <main className="flex min-h-screen flex-col justify-center p-24 w-screen bg-gradient-to-b from-blue-400 to-purple-500">
       <div>
-        <h1 className="text-4xl font-bold mb-8 text-center">Doodle Game 2d</h1>
+        <h1 className="text-4xl font-fredoka font-bold text-purple-600 mb-2 text-center">Doodle Game 2d</h1>
       </div>
 
-      <div className="rounded bg-gray-100 my-3 p-2 text-center w-full">
+      <div className="font-comic rounded bg-gray-100 my-3 p-2 text-center w-full">
           Play with Your Character! Use space to jump
         </div>
         
@@ -60,7 +60,7 @@ export default function PlayGame() {
           <div id="game-over">
             <h1>Game Over!</h1>
             <p>Your score: <span id="final-score">0</span></p>
-            <button id="restart" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">Play Again</button>
+            <button id="restart" className="font-fredoka px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">Play Again</button>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ export default function PlayGame() {
         <div className="mt-8 text-center">
           <button 
             onClick={handleNewCharacter}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            className="font-fredoka px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
           >
             Create New Character
           </button>

@@ -51,8 +51,8 @@ export default function Camera({ onCapture }: CameraProps) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="rounded bg-gray-100 my-3 p-2 text-center w-full">
-        Draw your character and show it to the camera, then hit &lsquo;Take photo&rsquo;
+      <div className="font-comic rounded bg-gray-100 my-3 p-2 text-center w-full">
+        Draw your character on white paper and show it to the camera, then hit &lsquo;Take photo&rsquo;
       </div>
       <div className="flex justify-center w-full">
         <video
@@ -65,7 +65,7 @@ export default function Camera({ onCapture }: CameraProps) {
       <div className="flex justify-center mt-4">
         <button
           onClick={capturePhoto}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          className="font-fredoka px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
         >
           Take Photo
         </button>
