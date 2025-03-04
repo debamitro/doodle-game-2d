@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Camera from './components/Camera';
+import Image from 'next/image';
 
 export default function Home() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function Home() {
             Your Photo
           </div>
           <div className="flex justify-center mt-4">
-            <img src={photo} alt="Original" className="max-w-sm rounded-lg shadow-lg" />
+            <Image src={photo} alt="Original" className="max-w-sm rounded-lg shadow-lg" />
           </div>
           <div className="flex justify-center mt-4">
             <button
