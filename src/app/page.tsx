@@ -62,9 +62,20 @@ export default function Home() {
             Your Photo
           </div>
           <div className="flex justify-center mt-4">
-            <Image src={photo} alt="Original" className="max-w-sm rounded-lg shadow-lg" />
+            <Image 
+            src={photo} 
+            alt="Original" 
+            width="500"
+            height="500"
+            className="max-w-sm rounded-lg shadow-lg" />
           </div>
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-4 gap-4">
+            <button
+              onClick={() => setPhoto(null)}
+              className="font-fredoka px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors"
+            >
+              Re-take Photo
+            </button>
             <button
               onClick={handleSubmit}
               className="font-fredoka px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors disabled:opacity-50"

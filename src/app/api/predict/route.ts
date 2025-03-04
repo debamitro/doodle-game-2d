@@ -21,8 +21,8 @@ export async function POST(request: Request) {
       {
         input: {
           image: image,
-          prompt: "a 2d cartoon character with bright colors",
-          prompt_strength: 0.2,
+          prompt: "a 2d cartoon character with bright colors on a white background",
+          prompt_strength: 0.3,
           disable_safety_checker: true
         }
       }
